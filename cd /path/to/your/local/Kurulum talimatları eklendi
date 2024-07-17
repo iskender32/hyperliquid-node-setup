@@ -1,41 +1,28 @@
-Hyperliquid DEX Node Kurulumu
-Gereksinimler
-Donanım: 4 CPU çekirdeği, 16 GB RAM, 50 GB disk alanı
-İşletim Sistemi: Ubuntu 24.04
-Ağ: 8000 ve 9000 portları açık olmalı
-Kurulum
-Depoyu Klonlayın:
+# Hyperliquid DEX Node Kurulumu
 
+## Gereksinimler
+
+- Donanım: 4 CPU çekirdeği, 16 GB RAM, 50 GB disk alanı
+- İşletim Sistemi: Ubuntu 24.04
+- Ağ: 8000 ve 9000 portları açık olmalı
+
+## Kurulum
+
+### Depoyu Klonlayın:
+```bash
 git clone https://github.com/hyperliquid-dex/node.git
 cd node
 Gerekli Bağımlılıkları Yükleyin:
-
 sudo apt-get update
 sudo apt-get install -y build-essential libssl-dev curl
-Node.js ve npm Kurun:
-
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
-Proje Bağımlılıklarını Yükleyin:
-
 npm install
-Peer Listesini İndirin:
-
 curl https://binaries.hyperliquid.xyz/Testnet/initial_peers.json > ~/initial_peers.json
-Testnet'i Yapılandırın:
-
 echo '{"chain": "Testnet"}' > ~/visor.json
-Non-Validator Konfigürasyon Dosyasını İndirin:
-
 curl https://binaries.hyperliquid.xyz/Testnet/non_validator_config.json > ~/non_validator_config.json
-Visor İkili Dosyasını İndirin ve Çalıştırılabilir Hale Getirin:
-
 curl https://binaries.hyperliquid.xyz/Testnet/hl-visor > ~/hl-visor && chmod a+x ~/hl-visor
-Node'u Başlatın:
-
 ~/hl-visor
-Günlük ve Veri Dosyalarını Kontrol Etme
-Günlükler:
-~/hl/data/visor_child_stderr/
-Blok Verileri:
-~/hl/data/replica_cmds/
+
+Bu şekilde kod bloklarınızın kopyala butonuyla birlikte görüntülenmesini sağlayabilirsiniz. Bu düzenlemeleri yaptıktan sonra değişikliklerinizi kaydedin ve commit edin.
+
