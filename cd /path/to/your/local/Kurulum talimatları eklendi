@@ -24,5 +24,3 @@ curl https://binaries.hyperliquid.xyz/Testnet/non_validator_config.json > ~/non_
 curl https://binaries.hyperliquid.xyz/Testnet/hl-visor > ~/hl-visor && chmod a+x ~/hl-visor
 ~/hl-visor
 
-Bu şekilde kod bloklarınızın kopyala butonuyla birlikte görüntülenmesini sağlayabilirsiniz. Bu düzenlemeleri yaptıktan sonra değişikliklerinizi kaydedin ve commit edin.
-
