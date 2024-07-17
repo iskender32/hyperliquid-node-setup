@@ -17,10 +17,16 @@ sudo apt-get update
 sudo apt-get install -y build-essential libssl-dev curl
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
+Proje Bağımlılıklarını Yükleyin:
 npm install
+Peer Listesini İndirin:
 curl https://binaries.hyperliquid.xyz/Testnet/initial_peers.json > ~/initial_peers.json
+Testnet'i Yapılandırın:
 echo '{"chain": "Testnet"}' > ~/visor.json
+Non-Validator Konfigürasyon Dosyasını İndirin:
 curl https://binaries.hyperliquid.xyz/Testnet/non_validator_config.json > ~/non_validator_config.json
+Visor İkili Dosyasını İndirin ve Çalıştırılabilir Hale Getirin:
 curl https://binaries.hyperliquid.xyz/Testnet/hl-visor > ~/hl-visor && chmod a+x ~/hl-visor
+Node'u Başlatın:
 ~/hl-visor
 
